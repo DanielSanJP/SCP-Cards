@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>SCP Details</title>
+</head>
+<body>
+    <div id="header"></div>
+
+    <h1 class="title">SCP Details</h1>
+
+    <div id="root"></div>
+
+
+
+    <script src="scripts/page.js"></script>
+
+    <script type="module">
+        import { headerTemplate } from './scripts/header.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('header').innerHTML = headerTemplate;
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        });
+    </script>
+
+</body>
+</html>
